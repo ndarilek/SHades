@@ -7,7 +7,6 @@ OnControlPressed{"Shout",
         print("findme")
         local exitDoorsIPairs = CollapseTable(OfferedExitDoors)
         for index, door in ipairs(exitDoorsIPairs) do
-            wait(0.5)
             print(inspect.inspect(door))
             SetAnimation({ DestinationId = door.ObjectId, Name = door.ExitDoorOpenAnimation }) -- sorta works
             -- Most working one I tested
@@ -16,6 +15,7 @@ OnControlPressed{"Shout",
             --     rewardContainerAnim = "RoomRewardShatter_MetaReward"
             -- end
             -- CreateAnimation({ Name = rewardContainerAnim, DestinationId = door.DoorIconFront, Scale = 1 })
+            wait(0.5)
         end
     end
 }
