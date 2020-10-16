@@ -1,4 +1,4 @@
-shades_inspect ={
+inspect ={
   _VERSION = 'inspect.lua 3.1.0',
   _URL     = 'http://github.com/kikito/inspect.lua',
   _DESCRIPTION = 'human-readable representations of tables',
@@ -329,6 +329,3 @@ function inspect.inspect(root, options)
 end
 
 setmetatable(inspect, { __call = function(_, ...) return inspect.inspect(...) end })
-
-return inspect
-
